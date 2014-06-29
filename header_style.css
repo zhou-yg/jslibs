@@ -12,11 +12,11 @@
 	background-repeat:no-repeat;
 	background-size:60px 60px;
 	margin:1px auto;
-	width:770px;
+	width:80%;
+	min-width:785px;
 	height:100%;
 	color:#241F1F;
 	font-size:20px;
-	padding-left:65px;
 }
 #headerTitle{
 	margin: 0 auto;
@@ -24,6 +24,8 @@
 	color:#555555;
 }
 #headerBgText #title{
+	position:relative;
+	left: 65px;
 	float:left;
 }
 #headerBgText #login{
