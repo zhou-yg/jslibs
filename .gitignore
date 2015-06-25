@@ -1,0 +1,11 @@
+
+.idea/
+.idea/jslibs.iml
+
+.idea/misc.xml
+
+.idea/workspace.xml
+
+bower_components/
+
+node_modules/

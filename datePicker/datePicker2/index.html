@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/jq/jquery2x.js"></script>
+
+    <link rel="stylesheet" media="screen" type="text/css" href="jquery.datepicker/base.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="jquery.datepicker/clean.css" />
+    <script src="jquery.datepicker.js"></script>
+</head>
+<body>
+<div>
+    <div id="simple-calendar"></div>
+</div>
+</body>
+<script>
+    (function(){
+        $('#simple-calendar').DatePicker({
+            mode: 'single',
+            inline: true,
+            date: new Date()
+        });
+    })();
+</script>
+</html>

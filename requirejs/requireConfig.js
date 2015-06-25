@@ -7,7 +7,7 @@ require.config({
     }
 });
 
-require(['hammer','q'],function(hammer,Q){
+require(['q'],function(Q){
 
     console.log('load hanmmer ,',Q);
 });
