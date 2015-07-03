@@ -1,0 +1,28 @@
+#zhouyg-datePicker {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 500px;
+  height: 470px; }
+  #zhouyg-datePicker > header {
+    width: 500px;
+    height: 70px; }
+    #zhouyg-datePicker > header .arrow-left, #zhouyg-datePicker > header .arrow-right {
+      background-color: #666666;
+      width: 68.57143px;
+      height: 70px; }
+    #zhouyg-datePicker > header .arrow-left {
+      float: left; }
+    #zhouyg-datePicker > header .arrow-right {
+      float: right; }
+    #zhouyg-datePicker > header .title {
+      background-color: #0000ff;
+      height: 70px;
+      display: flex; }
+      #zhouyg-datePicker > header .title .date {
+        flex: 1; }
+  #zhouyg-datePicker > table {
+    width: 500px;
+    height: 400px;
+    text-align: center; }
+
+/*# sourceMappingURL=datePicker.css.map */

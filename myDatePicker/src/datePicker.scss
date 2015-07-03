@@ -1,0 +1,50 @@
+
+$dateHeadHeight:70px;
+$datePickerWidth:500px;
+$datePickerHeight:400px;
+
+
+$datePadding:10px;
+
+$everyUnitWidth:($datePickerWidth - $datePadding * 2 ) / 7;
+$everyUnitHeight: $dateHeadHeight / 6;
+#zhouyg-datePicker{
+  box-sizing: border-box;
+  padding: $datePadding;
+  width: $datePickerWidth;
+  height: $datePickerHeight  + $dateHeadHeight;
+
+  > header{
+    width: $datePickerWidth;
+    height: $dateHeadHeight;
+
+    .arrow-left,.arrow-right{
+      background-color: #666666;
+      width: $everyUnitWidth;
+      height: $dateHeadHeight;
+    }
+    .arrow-left{
+      float: left;
+    }
+    .arrow-right{
+      float: right;
+    }
+    .title{
+      background-color: #0000ff;
+      height: $dateHeadHeight;
+      display: flex;
+
+      .date{
+        flex: 1;
+        span{
+
+        }
+      }
+    }
+  }
+  > table{
+    width: $datePickerWidth;
+    height:$datePickerHeight;
+    text-align: center;
+  }
+}
