@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="alert.css"/>
+</head>
+<body>
+
+
+<input type="text" id="in" autofocus/>
+<button onclick="a()">unfocus</button>
+<input style="display: none"  type="text" id="in2"/>
+</body>
+<script src="alert.js"></script>
+<script>
+    ip = document.getElementById('in');
+    ip.addEventListener('focus',function(){
+
+    });
+    function a(){
+        document.getElementById('in2').focus();
+    }
+    setTimeout(function(){
+        ip.focus();
+    },50);
+</script>
+</html>

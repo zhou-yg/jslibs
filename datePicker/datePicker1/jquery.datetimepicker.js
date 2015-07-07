@@ -4,7 +4,7 @@
 /**
  * @preserve jQuery DateTimePicker plugin v2.4.3
  * @homepage http://xdsoft.net/jqplugins/datetimepicker/
- * (c) 2014, Chupurnov Valeriy.
+ * (c) 2014, Chupurn    ov Valeriy.
  */
 /*global document,window,jQuery,setTimeout,clearTimeout,HighlightedDate,getCurrentValue*/
 (function ($) {

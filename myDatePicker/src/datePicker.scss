@@ -1,5 +1,5 @@
 
-$dateHeadHeight:70px;
+$dateHeadHeight:60px;
 $datePickerWidth:500px;
 $datePickerHeight:400px;
 
@@ -7,31 +7,44 @@ $datePickerHeight:400px;
 $datePadding:10px;
 
 $everyUnitWidth:($datePickerWidth - $datePadding * 2 ) / 7;
-$everyUnitHeight: $dateHeadHeight / 6;
+$everyUnitHeight: $datePickerHeight / 6;
+
+$arrowWidth:40px;
+
 #zhouyg-datePicker{
   box-sizing: border-box;
+  border: 1px #999 solid;
   padding: $datePadding;
   width: $datePickerWidth;
-  height: $datePickerHeight  + $dateHeadHeight;
 
   > header{
-    width: $datePickerWidth;
-    height: $dateHeadHeight;
+    width: 100%;
+    height: $everyUnitHeight;
 
     .arrow-left,.arrow-right{
-      background-color: #666666;
       width: $everyUnitWidth;
       height: $dateHeadHeight;
+      line-height: $dateHeadHeight;
     }
     .arrow-left{
+      background-image: url(../alert_success.png);
+      background-repeat: no-repeat;
+      background-size: $arrowWidth $arrowWidth;
+      background-position: center center;
       float: left;
     }
     .arrow-right{
+      background-image: url(../alert_success.png);
+      background-repeat: no-repeat;
+      background-size: $arrowWidth $arrowWidth;
+      background-position: center center;
       float: right;
     }
     .title{
-      background-color: #0000ff;
+      background-color: #BEBEE2;
       height: $dateHeadHeight;
+      line-height: $dateHeadHeight;
+      text-align: center;
       display: flex;
 
       .date{
@@ -43,8 +56,17 @@ $everyUnitHeight: $dateHeadHeight / 6;
     }
   }
   > table{
-    width: $datePickerWidth;
+    background-color: #f0f0f0;
+    width: 100%;
     height:$datePickerHeight;
     text-align: center;
+
+    th,td{
+      background-color: #ffffff;
+    }
+
+    thead{
+      height: $everyUnitHeight;
+    }
   }
 }
