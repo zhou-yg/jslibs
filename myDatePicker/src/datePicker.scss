@@ -1,68 +1,102 @@
 
-$dateHeadHeight:60px;
-$datePickerWidth:500px;
-$datePickerHeight:400px;
+$dateHeadHeight:28px;
+$datePickerWidth:260px;
+$datePickerHeight:350px;
 
 
-$datePadding:10px;
+$datePadding:5px;
 
 $everyUnitWidth:($datePickerWidth - $datePadding * 2 ) / 7;
 $everyUnitHeight: $datePickerHeight / 6;
 
 $arrowWidth:40px;
 
+$mainColor:#16a6b3;
+
+@mixin splitLine(){
+  border-bottom: #ededed 1px solid;
+}
+
 #zhouyg-datePicker{
-  box-sizing: border-box;
-  border: 1px #999 solid;
-  padding: $datePadding;
+  background-color: #fff;
   width: $datePickerWidth;
+  height: $datePickerHeight;
 
   > header{
+    box-sizing: border-box;
+    padding: 0 $datePadding;
     width: 100%;
-    height: $everyUnitHeight;
+    height: $dateHeadHeight;
+    line-height: $dateHeadHeight;
+    @include splitLine();
+
+    position: relative;
 
     .arrow-left,.arrow-right{
-      width: $everyUnitWidth;
-      height: $dateHeadHeight;
-      line-height: $dateHeadHeight;
+      margin-top: -5px;
+      border-top: solid 1px #999999;
+      border-left: solid 1px #999999;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+
+      cursor: pointer;;
     }
     .arrow-left{
-      background-image: url(../alert_success.png);
-      background-repeat: no-repeat;
-      background-size: $arrowWidth $arrowWidth;
-      background-position: center center;
-      float: left;
+      transform: rotate(-45deg);
+      left: 15px;
     }
     .arrow-right{
-      background-image: url(../alert_success.png);
-      background-repeat: no-repeat;
-      background-size: $arrowWidth $arrowWidth;
-      background-position: center center;
-      float: right;
+      transform: rotate(135deg);
+      right: 15px;
     }
     .title{
-      background-color: #BEBEE2;
+      width: 100%;
       height: $dateHeadHeight;
       line-height: $dateHeadHeight;
+      color: #666666;
       text-align: center;
-      display: flex;
 
-      .date{
-        flex: 1;
-        span{
-
-        }
-      }
+      display: inline-block;
     }
   }
   > table{
-    background-color: #f0f0f0;
+    @include splitLine();
     width: 100%;
-    height:$datePickerHeight;
+    height: 181px;;
     text-align: center;
 
-    th,td{
-      background-color: #ffffff;
+    th,td {
+      padding: 0;
+      color: #666666;
+      font-size: 14px;
+      line-height: 2.2em;
+    }
+
+    tbody td{
+      cursor: pointer;
+      &.minor{
+        color: #999999;
+      }
+      &.highlight{
+        color: #dd0000;
+      }
+      &:hover{
+        background-color: $mainColor;
+        border-radius: 50%;
+        color: #ffffff;
+      }
+      &.current{
+        border: $mainColor 2px solid;
+        border-radius: 50%;
+        box-sizing: border-box;
+        padding: 7px;
+        width: 32px;
+        height: 32px;
+        line-height: initial;
+      }
     }
 
     thead{

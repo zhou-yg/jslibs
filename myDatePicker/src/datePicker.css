@@ -1,43 +1,67 @@
 #zhouyg-datePicker {
-  box-sizing: border-box;
-  border: 1px #999 solid;
-  padding: 10px;
-  width: 500px; }
+  background-color: #fff;
+  width: 260px;
+  height: 350px; }
   #zhouyg-datePicker > header {
+    box-sizing: border-box;
+    padding: 0 5px;
     width: 100%;
-    height: 66.66667px; }
+    height: 28px;
+    line-height: 28px;
+    border-bottom: #ededed 1px solid;
+    position: relative; }
     #zhouyg-datePicker > header .arrow-left, #zhouyg-datePicker > header .arrow-right {
-      width: 68.57143px;
-      height: 60px;
-      line-height: 60px; }
+      margin-top: -5px;
+      border-top: solid 1px #999999;
+      border-left: solid 1px #999999;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      cursor: pointer; }
     #zhouyg-datePicker > header .arrow-left {
-      background-image: url(../alert_success.png);
-      background-repeat: no-repeat;
-      background-size: 40px 40px;
-      background-position: center center;
-      float: left; }
+      transform: rotate(-45deg);
+      left: 15px; }
     #zhouyg-datePicker > header .arrow-right {
-      background-image: url(../alert_success.png);
-      background-repeat: no-repeat;
-      background-size: 40px 40px;
-      background-position: center center;
-      float: right; }
+      transform: rotate(135deg);
+      right: 15px; }
     #zhouyg-datePicker > header .title {
-      background-color: #BEBEE2;
-      height: 60px;
-      line-height: 60px;
+      width: 100%;
+      height: 28px;
+      line-height: 28px;
+      color: #666666;
       text-align: center;
-      display: flex; }
-      #zhouyg-datePicker > header .title .date {
-        flex: 1; }
+      display: inline-block; }
   #zhouyg-datePicker > table {
-    background-color: #f0f0f0;
+    border-bottom: #ededed 1px solid;
     width: 100%;
-    height: 400px;
+    height: 181px;
     text-align: center; }
     #zhouyg-datePicker > table th, #zhouyg-datePicker > table td {
-      background-color: #ffffff; }
+      padding: 0;
+      color: #666666;
+      font-size: 14px;
+      line-height: 2.2em; }
+    #zhouyg-datePicker > table tbody td {
+      cursor: pointer; }
+      #zhouyg-datePicker > table tbody td.minor {
+        color: #999999; }
+      #zhouyg-datePicker > table tbody td.highlight {
+        color: #dd0000; }
+      #zhouyg-datePicker > table tbody td:hover {
+        background-color: #16a6b3;
+        border-radius: 50%;
+        color: #ffffff; }
+      #zhouyg-datePicker > table tbody td.current {
+        border: #16a6b3 2px solid;
+        border-radius: 50%;
+        box-sizing: border-box;
+        padding: 7px;
+        width: 32px;
+        height: 32px;
+        line-height: initial; }
     #zhouyg-datePicker > table thead {
-      height: 66.66667px; }
+      height: 58.33333px; }
 
 /*# sourceMappingURL=datePicker.css.map */
